@@ -1,4 +1,11 @@
-export default function PrintValue(props: {
+export default function PrintValue({
+  numberValue,
+  stringValue,
+  booleanValue,
+  arrayValue,
+  objectValue,
+  handleClick,
+}: {
   numberValue: number;
   stringValue: string;
   booleanValue: true | false;
@@ -6,15 +13,14 @@ export default function PrintValue(props: {
   objectValue: { name: string; age: number };
   handleClick: () => void;
 }) {
-  console.log(props);
   return (
     <>
-      <div>number: {props.numberValue}</div>
-      <div>string: {props.stringValue}</div>
-      <div>boolean: {props.booleanValue.toString()}</div>
-      <div>array: {props.arrayValue}</div>
-      <div>object: {JSON.stringify(props.objectValue)}</div>
-      <div>function: {props.handleClick.toString()}</div>
+      <div>number: {numberValue}</div>
+      <div>string: {stringValue}</div>
+      <div>boolean: {booleanValue.toString()}</div>
+      <div>array: {arrayValue}</div>
+      <div>object: {JSON.stringify(objectValue)}</div>
+      <div>function: {handleClick.toString()}</div>
     </>
   );
 }
