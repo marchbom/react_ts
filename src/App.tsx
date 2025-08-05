@@ -1,22 +1,14 @@
-import UserProfile from "./components/UserProfile";
-import UserProfile2 from "./components/UserProfile2";
+import MissionButton from "./components/ui/MissionButton";
 
 export default function App() {
-  const userObj = {
-    name: "Alice",
-    age: 30,
-    isAdmin: true,
+  const clickHandler = (message: string) => {
+    alert(message);
   };
   return (
     <>
-      <UserProfile userObj={userObj} />
-      <UserProfile2>
-        <>
-          <p>이름 : Bob</p>
-          <p>나이 : 30</p>
-          <p>관리자가 아닙니다.</p>
-        </>
-      </UserProfile2>
+      <MissionButton clickHandler={clickHandler} message="미션 성공!">
+        미션 수행
+      </MissionButton>
     </>
   );
 }
