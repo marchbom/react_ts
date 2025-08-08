@@ -1,27 +1,19 @@
 import { useState } from "react";
-import TrafficLight from "./components/TrafficLight";
+import GuestView from "./components/GuestView";
+import UserView from "./components/UserView";
 
 export default function App() {
-  const [status, setStatus] = useState("RED");
-
-  const handleStatus = () => {
-    switch (status) {
-      case "RED":
-        setStatus("YELLOW");
-        break;
-      case "YELLOW":
-        setStatus("GREEN");
-        break;
-      case "GREEN":
-        setStatus("RED");
-        break;
-      default:
-        setStatus("RED");
-    }
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const loginHandler = () => {
+    setIsLoggedIn((prev) => !prev);
   };
   return (
     <>
-      <TrafficLight status={status} handleStatus={handleStatus} />
+      {isLoggedIn ? (
+        <UserView loginHandler={loginHandler} />
+      ) : (
+        <GuestView loginHandler={loginHandler} />
+      )}
     </>
   );
 }
