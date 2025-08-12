@@ -8,3 +8,19 @@ interface PrintValue {
   objectValue: { name: string; age: number };
   handleClick: () => void;
 }
+
+// src/styles/styled.d.ts
+import "styled-components";
+
+declare module "styled-components" {
+  export interface DefaultTheme {
+    colors: {
+      primary: string;
+      secondary: string;
+    };
+    fontSize: {
+      normal: string;
+      large: string;
+    };
+  }
+}
