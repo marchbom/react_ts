@@ -1,9 +1,9 @@
-import Calculator from "./components/Calculator";
+import UserInfoForm from "./components/UserInfoForm";
 
 export default function App() {
   return (
     <>
-      <Calculator />
+      <UserInfoForm />
     </>
   );
 }

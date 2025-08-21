@@ -1,4 +1,8 @@
-export const performCalculation = (prev: number, current: number, operation: string) => {
+export const performCalculation = (
+  prev: number,
+  current: number,
+  operation: string,
+) => {
   switch (operation) {
     case "+":
       return prev + current;

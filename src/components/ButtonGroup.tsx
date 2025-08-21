@@ -5,7 +5,12 @@ import classNames from "classnames/bind";
 export default function ButtonGroup({
   initialButtons,
 }: {
-  initialButtons: { id: number; label: string; icon: string; isDisabled: boolean }[];
+  initialButtons: {
+    id: number;
+    label: string;
+    icon: string;
+    isDisabled: boolean;
+  }[];
 }) {
   const cx = classNames.bind(styles);
   const initialActive: { [key: string]: boolean } = {};

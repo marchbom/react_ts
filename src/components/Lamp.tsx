@@ -10,7 +10,12 @@ export default function Lamp() {
   return (
     <>
       <div
-        style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
       >
         {!isLamp && <img src={lampoff} onClick={toggleHandler} />}
         {isLamp && <img src={lampOn} onClick={toggleHandler} />}
